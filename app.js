@@ -3,7 +3,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const _ = require("lodash");
 
-const date = require(__dirname + "/date.js");//因为这个模块是本地的，所以要在前面加__dirname
+//const date = require(__dirname + "/date.js");//因为这个模块是本地的，所以要在前面加__dirname
 
 const app = express();
 app.use(bodyParser.urlencoded({extended: true}));
