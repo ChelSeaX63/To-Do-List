@@ -10,7 +10,13 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(express.static("public"));
 app.set("view engine", "ejs");
 
-
+export default function handler(request, response) {
+    response.status(200).json({
+        body: request.body,
+        query: request.query,
+        cookies: request.cookies,
+    });
+}
 
 //用mongoose取代这部分
 // let items = [];//先定义这个变量，代码先运行到app.get()那段才不会报错
